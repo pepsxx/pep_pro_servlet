@@ -1,40 +1,35 @@
-package com.code.pep.pep_pro_servlet.util;
-
-import lombok.SneakyThrows;
-import lombok.experimental.UtilityClass;
+package com.code.pep.pep_pro_servlet.util_Old;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 // Утилитный класс - для установки соединения с базой.
-@UtilityClass
-// Помечается как final
-// Создаётся пустой приватный конструктор
-// Методы, поля, вн. Классы помечаются static
-// ВНИМАНИЕ: Не используйте статический импорт без звездочки для импорта этих членов; либо явно пометить Методы, поля, вн. Классы static
-public class ConnectionManager {
+public final class ConnectionManagerOld {
 
-    private final String URL_KEY = "db.url";
-    private final String USR_KEY = "db.usr";
-    private final String PAS_KEY = "db.pas";
-    private final String DRV_KEY = "db.drv";
+    private static final String URL_KEY = "db.url";
+    private static final String USR_KEY = "db.usr";
+    private static final String PAS_KEY = "db.pas";
+    private static final String DRV_KEY = "db.drv";
 
     static {
         loadDriver();
     }
 
-    private void loadDriver() {
+    private static void loadDriver() {
         try {
 //            Class.forName("org.postgresql.Driver");
-            Class.forName(PropertiesUtil.get(DRV_KEY));
+            Class.forName(PropertiesUtilOld.get(DRV_KEY));
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
 
-    @SneakyThrows // Делает try catch
-    public Connection get() {
+    private ConnectionManagerOld() {
+    }
+
+    public static Connection get() {
+        try {
 //            Блок для проверки:
 //            System.out.println("URL_KEY = " + URL_KEY);
 //            System.out.println("USR_KEY = " + USR_KEY);
@@ -45,8 +40,11 @@ public class ConnectionManager {
 //            System.out.println("PropertiesUtil.get(PAS_KEY) = " + PropertiesUtil.get(PAS_KEY));
 //            System.out.println("PropertiesUtil.get(DDB_KEY) = " + PropertiesUtil.get(DRV_KEY));
             return DriverManager.getConnection(
-                    PropertiesUtil.get(URL_KEY),
-                    PropertiesUtil.get(USR_KEY),
-                    PropertiesUtil.get(PAS_KEY));
+                    PropertiesUtilOld.get(URL_KEY),
+                    PropertiesUtilOld.get(USR_KEY),
+                    PropertiesUtilOld.get(PAS_KEY));
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

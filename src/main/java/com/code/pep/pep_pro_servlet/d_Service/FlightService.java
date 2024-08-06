@@ -26,16 +26,16 @@ public class FlightService {
     // Получение коллекции DTO - Начало
     public List<FlightDto> findAll() {
         return flightDao.findAll().stream()
-                .map(f -> new FlightDto(
-                        f.getId(),
-                        """
-                                %s - %s - %s
-                                """.formatted(
-                                f.getDeparture_airport_code(),
-                                f.getArrival_airport_code(),
-                                f.getStatus()
-                        )
-                ))
+                .map(f -> FlightDto.builder()
+                        .id(f.getId())
+                        .description(
+                                """
+                                        %s - %s - %s
+                                        """.formatted(
+                                        f.getDeparture_airport_code(),
+                                        f.getArrival_airport_code(),
+                                        f.getStatus()))
+                        .build())
                 .collect(Collectors.toList());
     }
     // Получение коллекции DTO - Конец

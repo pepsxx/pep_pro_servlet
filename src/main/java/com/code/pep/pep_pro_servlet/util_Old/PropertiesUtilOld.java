@@ -1,0 +1,29 @@
+package com.code.pep.pep_pro_servlet.util_Old;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
+// Утилитный класс - для получения настроек из файла.
+public final class PropertiesUtilOld {
+    private static final Properties PROPERTIES = new Properties();
+
+    static {
+        loadProperties();
+    }
+
+    private static void loadProperties() {
+        try (InputStream inputStream = PropertiesUtilOld.class.getClassLoader().getResourceAsStream("application.properties")) {
+            PROPERTIES.load(inputStream);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private PropertiesUtilOld() {
+    }
+
+    public static String get(String key) {
+        return PROPERTIES.getProperty(key);
+    }
+}

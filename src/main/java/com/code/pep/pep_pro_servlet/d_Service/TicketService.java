@@ -26,11 +26,11 @@ public class TicketService {
     // Получение коллекции DTO - Начало
     public List<TicketDto> getAllByFlightId(Long flightId) {
         return ticketDao.findAllByFlightId(flightId).stream()
-                .map(t -> new TicketDto(
-                        t.getId(),
-                        t.getFlight_id(),
-                        t.getSeat_no()
-                ))
+                .map(t -> TicketDto.builder()
+                        .id(t.getId())
+                        .flight_id(t.getFlight_id())
+                        .seat_no(t.getSeat_no())
+                        .build())
                 .collect(Collectors.toList());
     }
     // Получение коллекции DTO - Конец

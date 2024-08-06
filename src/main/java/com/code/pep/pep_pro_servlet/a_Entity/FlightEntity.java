@@ -7,7 +7,7 @@ import lombok.EqualsAndHashCode;
 import java.time.LocalDateTime;
 
 // map один к одному с db
-@Data // Набор аннотаций:
+ @Data // Набор аннотаций:
 // @Getter                  - Геттеры
 // @Setter                  - Сеттеры
 // @RequiredArgsConstructor - Пустой конструктор если нет других
