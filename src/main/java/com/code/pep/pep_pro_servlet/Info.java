@@ -10,7 +10,7 @@ import jakarta.servlet.annotation.*;
 @WebServlet(name = "Info", value = "/info")
 public class Info extends HttpServlet {
     private String message;
-    private String time = LocalTime.now().truncatedTo(ChronoUnit.SECONDS).toString();
+    private final String time = LocalTime.now().truncatedTo(ChronoUnit.SECONDS).toString();
 
     public void init() {
         message = "Info - %s</br>".formatted(this.time);
