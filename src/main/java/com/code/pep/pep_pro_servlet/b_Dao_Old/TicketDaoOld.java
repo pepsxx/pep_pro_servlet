@@ -1,7 +1,7 @@
 package com.code.pep.pep_pro_servlet.b_Dao_Old;
 
-import com.code.pep.pep_pro_servlet.a_Entity.TicketEntity;
-import com.code.pep.pep_pro_servlet.util.ConnectionManager;
+import com.code.pep.pep_pro_servlet.a_Entity_Old.TicketEntityOld;
+import com.code.pep.pep_pro_servlet.util_Old.ConnectionManagerOld;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class TicketDaoOld implements Dao<Long, TicketEntity> {
+public class TicketDaoOld implements Dao<Long, TicketEntityOld> {
 
     // Создание INSTANCE для текущего DAO - Начало
     private static final TicketDaoOld INSTANCE = new TicketDaoOld();
@@ -33,12 +33,12 @@ public class TicketDaoOld implements Dao<Long, TicketEntity> {
             """;
     // Подготовленные запросы SQL - Конец
 
-    public List<TicketEntity> findAllByFlightId(Long flightId) {
-        try (Connection connection = ConnectionManager.get()) {
+    public List<TicketEntityOld> findAllByFlightId(Long flightId) {
+        try (Connection connection = ConnectionManagerOld.get()) {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL_FIND_ALL_BY_FLIGHT_ID);
             preparedStatement.setObject(1, flightId);
             ResultSet resultSet = preparedStatement.executeQuery();
-            List<TicketEntity> ticketEntities = new ArrayList<>();
+            List<TicketEntityOld> ticketEntities = new ArrayList<>();
             while (resultSet.next()) {
                 ticketEntities.add(buildTicket(resultSet));
             }
@@ -49,8 +49,8 @@ public class TicketDaoOld implements Dao<Long, TicketEntity> {
     }
 
     // Билдер Entity - Начало
-    private TicketEntity buildTicket(ResultSet resultSet) throws SQLException {
-        return new TicketEntity(
+    private TicketEntityOld buildTicket(ResultSet resultSet) throws SQLException {
+        return new TicketEntityOld(
                 resultSet.getObject("id", Long.class),
                 resultSet.getObject("passenger_no", String.class),
                 resultSet.getObject("passenger_name", String.class),
@@ -62,12 +62,12 @@ public class TicketDaoOld implements Dao<Long, TicketEntity> {
 
     // Не реализованные методы - Начало
     @Override
-    public List<TicketEntity> findAll() {
+    public List<TicketEntityOld> findAll() {
         return List.of();
     }
 
     @Override
-    public Optional<TicketEntity> findById(Long id) {
+    public Optional<TicketEntityOld> findById(Long id) {
         return Optional.empty();
     }
 
@@ -77,11 +77,11 @@ public class TicketDaoOld implements Dao<Long, TicketEntity> {
     }
 
     @Override
-    public void Update(TicketEntity entity) {
+    public void Update(TicketEntityOld entity) {
     }
 
     @Override
-    public TicketEntity save(TicketEntity entity) {
+    public TicketEntityOld save(TicketEntityOld entity) {
         return null;
     }
     // Не реализованные методы - Конец

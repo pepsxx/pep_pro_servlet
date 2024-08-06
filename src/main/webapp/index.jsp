@@ -10,6 +10,8 @@
 <br/>
 <h2><a href="flights">Получить информацию с db.</a></h2>
 <br/>
+<h2><a href="flightsold">Получить информацию Old с db.</a></h2>
+<br/>
 <h2><a href="info">Информация о требованиях к db.</a></h2>
 </body>
 </html>

@@ -50,13 +50,14 @@ public class TicketDao implements Dao<Long, TicketEntity> {
 
     // Билдер Entity - Начало
     private TicketEntity buildTicket(ResultSet resultSet) throws SQLException {
-        return new TicketEntity(
-                resultSet.getObject("id", Long.class),
-                resultSet.getObject("passenger_no", String.class),
-                resultSet.getObject("passenger_name", String.class),
-                resultSet.getObject("flight_id", Long.class),
-                resultSet.getObject("seat_no", String.class),
-                resultSet.getObject("cost", BigDecimal.class));
+        return TicketEntity.builder()
+                .id(resultSet.getLong("id"))
+                .passenger_no(resultSet.getString("passenger_no"))
+                .passenger_name(resultSet.getString("passenger_name"))
+                .flight_id(resultSet.getLong("flight_id"))
+                .seat_no(resultSet.getString("seat_no"))
+                .cost(resultSet.getBigDecimal("cost"))
+                .build();
     }
     // Билдер Entity - Конец
 

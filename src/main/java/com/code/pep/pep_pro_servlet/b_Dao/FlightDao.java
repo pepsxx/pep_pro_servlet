@@ -46,15 +46,16 @@ public class FlightDao implements Dao<Long, FlightEntity> {
 
     // Билдер Entity - Начало
     private FlightEntity buildFight(ResultSet resultSet) throws SQLException {
-        return new FlightEntity(
-                resultSet.getObject("id", Long.class),
-                resultSet.getObject("flight_no", String.class),
-                resultSet.getObject("departure_date", Timestamp.class).toLocalDateTime(),
-                resultSet.getObject("departure_airport_code", String.class),
-                resultSet.getObject("arrival_date", Timestamp.class).toLocalDateTime(),
-                resultSet.getObject("arrival_airport_code", String.class),
-                resultSet.getObject("aircraft_id", Integer.class),
-                FlightStatusEntity.valueOf(resultSet.getObject("status", String.class)));
+        return FlightEntity.builder()
+                .id(resultSet.getLong("id"))
+                .flight_no(resultSet.getString("flight_no"))
+                .departure_date(resultSet.getTimestamp("departure_date").toLocalDateTime())
+                .departure_airport_code(resultSet.getString("departure_airport_code"))
+                .arrival_date(resultSet.getTimestamp("arrival_date").toLocalDateTime())
+                .arrival_airport_code(resultSet.getString("arrival_airport_code"))
+                .aircraft_id(resultSet.getInt("aircraft_id"))
+                .status(FlightStatusEntity.valueOf(resultSet.getString("status")))
+                .build();
     }
     // Билдер Entity - Конец
 

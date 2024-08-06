@@ -1,15 +1,15 @@
 package com.code.pep.pep_pro_servlet.b_Dao_Old;
 
-import com.code.pep.pep_pro_servlet.a_Entity.FlightEntity;
-import com.code.pep.pep_pro_servlet.a_Entity.FlightStatusEntity;
-import com.code.pep.pep_pro_servlet.util.ConnectionManager;
+import com.code.pep.pep_pro_servlet.a_Entity_Old.FlightEntityOld;
+import com.code.pep.pep_pro_servlet.a_Entity_Old.FlightStatusEntityOld;
+import com.code.pep.pep_pro_servlet.util_Old.ConnectionManagerOld;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class FlightDaoOld implements Dao<Long, FlightEntity> {
+public class FlightDaoOld implements Dao<Long, FlightEntityOld> {
 
     // Создание INSTANCE для текущего DAO - Начало
     private static final FlightDaoOld INSTANCE = new FlightDaoOld();
@@ -30,11 +30,11 @@ public class FlightDaoOld implements Dao<Long, FlightEntity> {
     // Подготовленные запросы SQL - Конец
 
     @Override
-    public List<FlightEntity> findAll() {
-        try (Connection connection = ConnectionManager.get()) {
+    public List<FlightEntityOld> findAll() {
+        try (Connection connection = ConnectionManagerOld.get()) {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL_FIND_ALL);
             ResultSet resultSet = preparedStatement.executeQuery();
-            List<FlightEntity> flightEntities = new ArrayList<>();
+            List<FlightEntityOld> flightEntities = new ArrayList<>();
             while (resultSet.next()) {
                 flightEntities.add(buildFight(resultSet));
             }
@@ -45,8 +45,8 @@ public class FlightDaoOld implements Dao<Long, FlightEntity> {
     }
 
     // Билдер Entity - Начало
-    private FlightEntity buildFight(ResultSet resultSet) throws SQLException {
-        return new FlightEntity(
+    private FlightEntityOld buildFight(ResultSet resultSet) throws SQLException {
+        return new FlightEntityOld(
                 resultSet.getObject("id", Long.class),
                 resultSet.getObject("flight_no", String.class),
                 resultSet.getObject("departure_date", Timestamp.class).toLocalDateTime(),
@@ -54,7 +54,7 @@ public class FlightDaoOld implements Dao<Long, FlightEntity> {
                 resultSet.getObject("arrival_date", Timestamp.class).toLocalDateTime(),
                 resultSet.getObject("arrival_airport_code", String.class),
                 resultSet.getObject("aircraft_id", Integer.class),
-                FlightStatusEntity.valueOf(resultSet.getObject("status", String.class)));
+                FlightStatusEntityOld.valueOf(resultSet.getObject("status", String.class)));
     }
     // Билдер Entity - Конец
 
@@ -65,16 +65,16 @@ public class FlightDaoOld implements Dao<Long, FlightEntity> {
     }
 
     @Override
-    public void Update(FlightEntity entity) {
+    public void Update(FlightEntityOld entity) {
     }
 
     @Override
-    public FlightEntity save(FlightEntity entity) {
+    public FlightEntityOld save(FlightEntityOld entity) {
         return null;
     }
 
     @Override
-    public Optional<FlightEntity> findById(Long id) {
+    public Optional<FlightEntityOld> findById(Long id) {
         return Optional.empty();
     }
     // Не реализованные методы - Конец

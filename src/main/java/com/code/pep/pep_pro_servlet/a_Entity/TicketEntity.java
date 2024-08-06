@@ -1,6 +1,7 @@
 package com.code.pep.pep_pro_servlet.a_Entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -15,6 +16,7 @@ import java.math.BigDecimal;
 // @EqualsAndHashCode       - методы Equals и HashCode
 @AllArgsConstructor // Конструктор со всеми аргументами
 @EqualsAndHashCode(onlyExplicitlyIncluded = true) // Equals и HashCode только для помеченных полей
+@Builder //                     - Создает аспект «строителя»
 public class TicketEntity {
     @EqualsAndHashCode.Include
     Long id;

@@ -10,8 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55f7bc2f-a3dd-4010-8840-300816c4edbd" name="Changes" comment="Commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/e_Servlet_Old/FlightServletOld.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/e_Servlet_Old/TicketServletOld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/a_Entity/FlightEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/a_Entity/FlightEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/a_Entity/TicketEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/a_Entity/TicketEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/b_Dao/FlightDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/b_Dao/FlightDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/b_Dao/TicketDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/b_Dao/TicketDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/b_Dao_Old/FlightDaoOld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/b_Dao_Old/FlightDaoOld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/b_Dao_Old/TicketDaoOld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/b_Dao_Old/TicketDaoOld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +77,7 @@
     "Tomcat Server.Tomcat 10.1.26-40080.executor": "Run",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/pep_s/IdeaProjects/pep_pro_servlet/src/main/java/com/code/pep/pep_pro_servlet/util_Щдв",
+    "last_opened_file_path": "C:/Users/pep_s/IdeaProjects/pep_pro_servlet/src/main/java/com/code/pep/pep_pro_servlet/e_Servlet_Old",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -90,11 +98,11 @@
       <recent name="com.code.pep.pep_pro_servlet.entity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pep_s\IdeaProjects\pep_pro_servlet\src\main\java\com\code\pep\pep_pro_servlet\e_Servlet_Old" />
       <recent name="C:\Users\pep_s\IdeaProjects\pep_pro_servlet\src\main\java\com\code\pep\pep_pro_servlet\util_Щдв" />
       <recent name="C:\Users\pep_s\IdeaProjects\pep_pro_servlet\src\main\java\com\code\pep\pep_pro_servlet\d_Service_Old" />
       <recent name="C:\Users\pep_s\IdeaProjects\pep_pro_servlet\src\main\java\com\code\pep\pep_pro_servlet\c_DtoOld" />
       <recent name="C:\Users\pep_s\IdeaProjects\pep_pro_servlet\src\main\java\com\code\pep\pep_pro_servlet\b_Dao_old" />
-      <recent name="C:\Users\pep_s\IdeaProjects\pep_pro_servlet\src\main\java\com\code\pep\pep_pro_servlet\a_Entity_lombok" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\pep_s\IdeaProjects\pep_pro_servlet\.mvn\wrapper" />
@@ -307,7 +315,10 @@
       <workItem from="1722853615341" duration="7312000" />
       <workItem from="1722868273744" duration="224000" />
       <workItem from="1722924356107" duration="4371000" />
-      <workItem from="1722928754731" duration="1627000" />
+      <workItem from="1722928754731" duration="1751000" />
+      <workItem from="1722931368654" duration="767000" />
+      <workItem from="1722933040821" duration="10000" />
+      <workItem from="1722933584155" duration="2376000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
@@ -333,7 +344,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722930314691</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1722930499176</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1722930499176</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
