@@ -38,7 +38,6 @@ public class FlightDaoOld implements Dao<Long, FlightEntity> {
             while (resultSet.next()) {
                 flightEntities.add(buildFight(resultSet));
             }
-            System.out.println("flightEntities.size() = " + flightEntities.size());
             return flightEntities;
         } catch (SQLException e) {
             throw new RuntimeException(e);

@@ -10,26 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55f7bc2f-a3dd-4010-8840-300816c4edbd" name="Changes" comment="Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/a_Entity_Old/FlightEntityOld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/a_Entity_Old/FlightStatusEntityOld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/a_Entity_Old/TicketEntityOld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/b_Dao_Old/Dao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/b_Dao_Old/FlightDaoOld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/b_Dao_Old/TicketDaoOld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/c_Dto_Old/FlightDtoOld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/c_Dto_Old/TicketDtoOld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/d_Service_Old/FlightServiceOld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/d_Service_Old/TicketServiceOld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/util_Old/ConnectionManagerOld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/util_Old/PropertiesUtilOld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/a_Entity/FlightEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/a_Entity/FlightEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/c_Dto/FlightDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/c_Dto/FlightDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/c_Dto/TicketDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/c_Dto/TicketDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/d_Service/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/d_Service/FlightService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/d_Service/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/d_Service/TicketService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/util/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/util/ConnectionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/util/PropertiesUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/util/PropertiesUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/b_Dao/FlightDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/b_Dao/FlightDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/b_Dao_Old/FlightDaoOld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/code/pep/pep_pro_servlet/b_Dao_Old/FlightDaoOld.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,7 +307,7 @@
       <workItem from="1722853615341" duration="7312000" />
       <workItem from="1722868273744" duration="224000" />
       <workItem from="1722924356107" duration="4371000" />
-      <workItem from="1722928754731" duration="1250000" />
+      <workItem from="1722928754731" duration="1627000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
@@ -343,7 +325,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722924947039</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1722930314691</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1722930314691</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
